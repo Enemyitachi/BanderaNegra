@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{titulo}</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: black;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/Logo.jpg" alt="Bandera Negra" height="50" class="me-2">
+            </a>
+            <div>
+                <a href="/menu" class="btn btn-outline-danger me-2">Menú</a>
+                <a href="/reservas" class="btn btn-outline-light">Reservar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-bold">Bienvenido a Bandera Negra</h1>
+    </header>
+
+    <!-- Categorías de menú -->
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card bg-black text-light border-danger h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Aguachiles</h5>
+                        <p class="card-text">Con variedad de chiles y proteínas.</p>
+                        <a href="/menu" class="btn btn-danger">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repetir para otras categorías -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center py-3 border-top border-danger">
+        <p class="mb-0">© Bandera Negra - {year}</p>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
