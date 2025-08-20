@@ -2,63 +2,91 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>{titulo}</title>
-    <!-- TailwindCSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Alpine.js -->
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Bandera Negra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark text-light">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm" style="background-color: black;">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="/Logo.jpg" alt="Bandera Negra" height="50" class="me-2">
-            </a>
-            <div>
-                <a href="/menu" class="btn btn-outline-danger me-2">Menú</a>
-                <a href="/reservas" class="btn btn-outline-light">Reservar</a>
-            </div>
+<body class="bg-black text-white font-sans">
+  <nav class="bg-black fixed w-full z-10 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="/Logo.jpg" alt="Bandera Negra" class="h-20">
+      </a>
+      <div class="space-x-4 hidden md:flex">
+        <a href="/" class="hover:text-red-500">Inicio</a>
+        <a href="/menu" class="hover:text-red-500">Menú</a>
+        <a href="/reservas" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Resenas</a>
+      </div>
+    </div>
+  </nav>
+  <section class="pt-20 bg-gradient-to-b from-black to-gray-900 text-center py-20">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-red-600 mb-6" data-aos="fade-down">
+      Bienvenidos a Bordo
+    </h1>
+    <p class="text-gray-300 text-lg mb-6" data-aos="fade-up">
+      No Se que poner aqui
+    </p>
+  </section>
+
+  <!-- Sección de presentación -->
+  <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div data-aos="fade-right">
+      <img src="/platillo.jpg" alt="Platillo Bandera Negra" class="rounded-lg shadow-lg mx-auto w-3/4 md:w2/3">
+    </div>
+    <div data-aos="fade-left">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-4">Nuestra Pasión</h2>
+      <p class="text-gray-300">
+        Estamos en busca de pensionarnos a los 40 y este negocio es la clave
+      </p>
+    </div>
+  </section>
+
+  <!-- Destacados -->
+  <section class="bg-gray-900 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-10" data-aos="fade-up">Platillos Destacados</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="flip-left">
+          <h3 class="text-xl font-semibold">Aguachile Bandera Negra</h3>
+          <p class="text-gray-400 mt-2">Chile chiltepín tatemado, limón y salsas negras.</p>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="text-center py-5">
-        <h1 class="display-4 fw-bold">Bienvenido a Bandera Negra</h1>
-    </header>
-
-    <!-- Categorías de menú -->
-    <section class="container my-5">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card bg-black text-light border-danger h-100">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Aguachiles</h5>
-                        <p class="card-text">Con variedad de chiles y proteínas.</p>
-                        <a href="/menu" class="btn btn-danger">Ver</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Repetir para otras categorías -->
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="flip-left">
+          <h3 class="text-xl font-semibold">Taco Capitán</h3>
+          <p class="text-gray-400 mt-2">Pescado capeado con pico de gallo y repollo fresco.</p>
         </div>
-    </section>
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg" data-aos="flip-left">
+          <h3 class="text-xl font-semibold">Balas de Pollo</h3>
+          <p class="text-gray-400 mt-2">6 piezas de boneless bañados en salsa Buffalo o BBQ.</p>
+        </div>
+      </div>
+      <div class="mt-10" data-aos="fade-up">
+        <a href="/menu" class="bg-red-600 px-6 py-3 rounded-lg text-lg hover:bg-red-700 transition inline-block">
+          Ver Menú Completo
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-center py-3 border-top border-danger">
-        <p class="mb-0">© Bandera Negra - {year}</p>
-    </footer>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
+  <!-- Contacto -->
+  <section class="max-w-6xl mx-auto px-4 py-16 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Visítanos</h2>
+    <p class="text-gray-300">Blvd. Cañaveral 801</p>
+    <p class="text-gray-300">Jueves a Domingo 12:00 pm - 6:00 pm</p>
+    <p class="text-gray-300">📞 477-591-4161</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-4 mt-10 border-t border-red-600">
+    <p class="text-gray-400">© Bandera Negra - {year}</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 
 </html>
